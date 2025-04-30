@@ -1,74 +1,49 @@
-# Home Lab | SOC | Self-Hosted Infrastructure
+# 🧱 Homelab SIEM/SOC Setup with OpenVPN Integration
 
-Welcome to my personal home lab documentation. This project is a learning environment where I'm building, configuring, and managing a hybrid network infrastructure — with on-premises and cloud integration — as part of my journey into cybersecurity, cloud computing, and networking.
+Welcome to the ultimate guide for building a feature-rich, cybersecurity-focused homelab that simulates a real-world Security Operations Center (SOC). This setup includes:
 
----
+- 🔐 **pfSense Firewall**  
+- 🌐 **OpenVPN for secure remote access**  
+- 🛡 **Suricata IDS/IPS**  
+- 📊 **Splunk SIEM**  
+- ☁️ **Azure Sentinel integration**  
+- 📁 **Log forwarding from AD, Linux, and pfSense**  
+- 🧠 **Threat Intelligence correlation**  
+- 🔄 **Backups to GitHub**  
+- 🌍 **Optional: Web, domain, and mail server log aggregation**
 
-## Project Overview
+## 🧰 Requirements
 
-This lab is designed to simulate a small enterprise network, integrating core IT and cybersecurity technologies. It includes firewalling, network segmentation, a Windows domain, log monitoring, and a hybrid cloud environment leveraging AWS.
+- At least 2 physical or virtual machines  
+- VirtualBox or bare-metal hardware  
+- pfSense ISO, Windows Server ISO, Ubuntu Server ISO  
+- Splunk (Free or Enterprise trial)  
+- Azure account (free tier or subscription)  
+- GitHub account  
+- Internet connection
 
-### Goals:
+## 📦 Features
 
-- Build a functional and secure home lab environment.
-- Gain hands-on experience with enterprise-level tools.
-- Explore threat detection, logging, and network defense.
-- Integrate AWS for hybrid infrastructure backup and expansion.
+- **VPN access** with OpenVPN for secure external access to your lab  
+- **Network segmentation** via pfSense and VLANs  
+- **Traffic inspection and alerting** using Suricata  
+- **SIEM dashboards and alerts** through Splunk and Azure Sentinel  
+- **Centralized logging** from Windows Server, Linux, pfSense  
+- **Threat detection and mitigation**  
+- **GitHub integration** for documentation and configuration backup  
 
----
 
-## Core Technologies
 
-| Tech | Description |
-|------|-------------|
-| **pfSense** | Firewall/router used to manage VLANs and secure network traffic. |
-| **Windows Server 2019** | Hosting Active Directory/AD DS for domain management. |
-| **Suricata** | IDS/IPS for network-level threat detection. |
-| **Splunk Free** | Log aggregation, searching, and analysis. |
-| **AWS** | Cloud integration for hybrid network design and log backups. |
-| **GitHub** | Documentation, version control, and public portfolio. |
+## 📈 Future Improvements
 
----
+- Automate deployment via Ansible or Terraform  
+- Expand to cloud-native SIEM (ELK stack, Wazuh)  
+- Use GitHub Actions for automated backups  
 
-## Network Architecture (Planned)
+## 💬 Feedback & Contributions
 
-- **LAN (192.168.2.0/24)**: Core trusted network
-- **VLANs**: Segmented for devices, labs, management, and IoT
-- **DMZ**: For future external-facing services (e.g., web server)
-- **VPN**: Remote access using OpenVPN or WireGuard
-
----
-
-## Hybrid Cloud Plan (AWS)
-
-- **S3**: Log backup and archival
-- **EC2**: Optional virtual SOC components (e.g., ELK Stack or Splunk forwarder)
-- **CloudWatch**: Potential integration for monitoring/logs
-- **IAM**: Role-based access for security best practices
+Pull requests and suggestions are welcome! Help improve the guide and expand its capabilities.
 
 ---
 
-## Future Additions
-
-- ELK Stack integration
-- SIEM comparison (Splunk vs ELK vs Wazuh)
-- Syslog server for network devices
-- External SSD storage for logs
-- Self-hosted web portal
-- Honeypot deployment
-
----
-
-## Why This Lab?
-
-I'm studying cybersecurity with a focus on cloud networking and this lab is how I’m getting hands-on with the tools and technologies used in real-world SOC and DevSecOps environments. It’s also a showcase of my growing skills in infrastructure design, cloud integration, and threat detection.
-
----
-
-## Contact
-
-If you'd like to connect, collaborate, or offer feedback — find me on LinkedIn or shoot me a message via GitHub.
-
----
-
-> **Note**: This documentation is a work in progress and will be updated as new features are added.
+© 2025 John Wesley Paige Jr.
