@@ -44,6 +44,42 @@ Welcome to the ultimate guide for building a feature-rich, cybersecurity-focused
 
 Pull requests and suggestions are welcome! Help improve the guide and expand its capabilities.
 
+🛠️ Update: Multi-Subnet Firewall Rule Implementation & OpenWRT WAN Access
+📅 Date: June 17, 2025
+🔧 Home Lab Project: Network Segmentation & Access Control
+
+✅ What I Did:
+Successfully diagnosed and resolved an access issue between segmented subnets in my home lab.
+
+Configured OpenWRT (Netgear R6220) to allow secure web-based (LuCI) and SSH management from outside its default LAN.
+
+Enabled admin access from both the 192.168.4.0/24 (main LAN) and 192.168.3.0/24 (XPS/dev lab) networks.
+
+Verified functionality via IP 192.168.2.28 (OpenWRT WAN interface) from multiple subnets.
+
+Added granular firewall traffic rules in OpenWRT to:
+
+Allow LuCI over TCP (80/443) from trusted internal subnets
+
+Allow SSH (22) for secure CLI access
+
+Maintained NAT separation and ensured no exposure to the public internet.
+
+🧠 What I Learned:
+OpenWRT does not allow WAN-to-LAN access by default, even from internal routed networks — must explicitly define rules.
+
+Firewall rule design requires directional awareness (source zone, dest zone).
+
+Multi-subnet environments benefit from clear IP schema and labeling.
+
+📍 Next Steps:
+Begin testing Suricata IDS/IPS deployment on either pfSense or OpenWRT
+
+Log and analyze traffic patterns between segmented zones
+
+Prepare for VPN and VLAN integration in phase 2 of the home lab
+
+Document topology and firewall rules for repository clarity
 ---
 
 
